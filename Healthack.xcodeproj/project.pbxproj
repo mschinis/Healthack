@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		CD48CA3D25FFF0A7009E150E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA3C25FFF0A7009E150E /* AppDelegate.swift */; };
 		CD48CA3F25FFF0A7009E150E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA3E25FFF0A7009E150E /* SceneDelegate.swift */; };
-		CD48CA4125FFF0A7009E150E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA4025FFF0A7009E150E /* ContentView.swift */; };
+		CD48CA4125FFF0A7009E150E /* DistanceAdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA4025FFF0A7009E150E /* DistanceAdderView.swift */; };
 		CD48CA4325FFF0BE009E150E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD48CA4225FFF0BE009E150E /* Assets.xcassets */; };
 		CD48CA4625FFF0BE009E150E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD48CA4525FFF0BE009E150E /* Preview Assets.xcassets */; };
 		CD48CA4925FFF0BE009E150E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD48CA4725FFF0BE009E150E /* LaunchScreen.storyboard */; };
+		CD48CA5425FFF10C009E150E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD48CA5325FFF10C009E150E /* HealthKit.framework */; };
+		CD48CA5725FFF447009E150E /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA5625FFF446009E150E /* AppView.swift */; };
+		CD48CA5C25FFF673009E150E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA5B25FFF673009E150E /* HealthKitManager.swift */; };
+		CD48CA5F25FFFD2D009E150E /* RequestPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48CA5E25FFFD2D009E150E /* RequestPermissionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD48CA3925FFF0A7009E150E /* Healthack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD48CA3C25FFF0A7009E150E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD48CA3E25FFF0A7009E150E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD48CA4025FFF0A7009E150E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD48CA4025FFF0A7009E150E /* DistanceAdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceAdderView.swift; sourceTree = "<group>"; };
 		CD48CA4225FFF0BE009E150E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD48CA4525FFF0BE009E150E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD48CA4825FFF0BE009E150E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD48CA4A25FFF0BE009E150E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD48CA5125FFF10C009E150E /* Healthack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Healthack.entitlements; sourceTree = "<group>"; };
+		CD48CA5325FFF10C009E150E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		CD48CA5625FFF446009E150E /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		CD48CA5B25FFF673009E150E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		CD48CA5E25FFFD2D009E150E /* RequestPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPermissionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD48CA5425FFF10C009E150E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				CD48CA3B25FFF0A7009E150E /* Healthack */,
 				CD48CA3A25FFF0A7009E150E /* Products */,
+				CD48CA5225FFF10C009E150E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +67,13 @@
 		CD48CA3B25FFF0A7009E150E /* Healthack */ = {
 			isa = PBXGroup;
 			children = (
+				CD48CA5A25FFF666009E150E /* Util */,
+				CD48CA5125FFF10C009E150E /* Healthack.entitlements */,
 				CD48CA3C25FFF0A7009E150E /* AppDelegate.swift */,
 				CD48CA3E25FFF0A7009E150E /* SceneDelegate.swift */,
-				CD48CA4025FFF0A7009E150E /* ContentView.swift */,
+				CD48CA4025FFF0A7009E150E /* DistanceAdderView.swift */,
+				CD48CA5E25FFFD2D009E150E /* RequestPermissionsView.swift */,
+				CD48CA5625FFF446009E150E /* AppView.swift */,
 				CD48CA4225FFF0BE009E150E /* Assets.xcassets */,
 				CD48CA4725FFF0BE009E150E /* LaunchScreen.storyboard */,
 				CD48CA4A25FFF0BE009E150E /* Info.plist */,
@@ -73,6 +88,22 @@
 				CD48CA4525FFF0BE009E150E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD48CA5225FFF10C009E150E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD48CA5325FFF10C009E150E /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD48CA5A25FFF666009E150E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CD48CA5B25FFF673009E150E /* HealthKitManager.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD48CA5725FFF447009E150E /* AppView.swift in Sources */,
+				CD48CA5F25FFFD2D009E150E /* RequestPermissionsView.swift in Sources */,
 				CD48CA3D25FFF0A7009E150E /* AppDelegate.swift in Sources */,
 				CD48CA3F25FFF0A7009E150E /* SceneDelegate.swift in Sources */,
-				CD48CA4125FFF0A7009E150E /* ContentView.swift in Sources */,
+				CD48CA5C25FFF673009E150E /* HealthKitManager.swift in Sources */,
+				CD48CA4125FFF0A7009E150E /* DistanceAdderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +320,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Healthack/Healthack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Healthack/Preview Content\"";
 				DEVELOPMENT_TEAM = KB4UVH66FP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Healthack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,11 +343,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Healthack/Healthack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Healthack/Preview Content\"";
 				DEVELOPMENT_TEAM = KB4UVH66FP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Healthack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
